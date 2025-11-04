@@ -1,15 +1,13 @@
-import axios from "axios";
+
 import { useEffect, useState } from "react"
 
 export const Movie = () => {
 
     const [data,setData] = useState([]);
 
-    const Api = "http://www.omdbapi.com/?i=tt3896198&apikey=342e4c02&s=Avengers&page=1"
-
     const getMovieData = async () => {
         try {
-            const res = await axios.get(Api)
+            const res = await getMovieData();
             // console.log(res.data.Search);
             setData(res.data.Search)
         } catch (error) {
