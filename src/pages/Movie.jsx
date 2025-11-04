@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react"
+import { getMovie } from "../services/GetService";
 
 export const Movie = () => {
 
@@ -7,7 +8,7 @@ export const Movie = () => {
 
     const getMovieData = async () => {
         try {
-            const res = await getMovieData();
+            const res = await getMovie();
             // console.log(res.data.Search);
             setData(res.data.Search)
         } catch (error) {
