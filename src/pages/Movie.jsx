@@ -22,7 +22,7 @@ export const Movie = () => {
     }, [])
 
     return (
-        <ul>
+        <ul className="container grid grid-four-cols">
             {
                 data.map((curElem)=>{
                     return <Card key = {curElem.imdbID} movieData = {curElem}/>
